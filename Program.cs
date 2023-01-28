@@ -1,6 +1,6 @@
 ﻿//solutiuon
 string inputLine = ReadData("Ввведите массив строк (строки разделяются запятой): ");
-string[] stringArrayInput = SplitNames(inputLine);
+string[] stringArrayInput = SplitLineToStringArray(inputLine);
 string[] stringArrayResult = StringArrayExtraction(stringArrayInput);
 PrintArray(stringArrayResult);
 
@@ -29,7 +29,7 @@ string[] StringArrayExtraction(string[] inputArr)
 }
 
 //method create array of names from input string
-string[] SplitNames(string line)
+string[] SplitLineToStringArray(string line)
 {
     string[] stringArr = line.Split(",", StringSplitOptions.RemoveEmptyEntries);
     return stringArr;
